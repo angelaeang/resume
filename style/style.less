@@ -1,0 +1,160 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200;300;400;500;600;700;800&display=swap');
+
+// main colors
+@pink: #F7D6E0;
+@green: #DEEFB7;
+@gray: #465362;
+@red: #ED254E;
+@navy: #011936;
+@blue: #30bdc6;
+
+html, body {
+    background-color: @pink;
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Trispace', sans-serif;
+    font-weight: 300;
+    color: @navy;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: inherit;
+    }
+}
+
+.center-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    // background-color: @green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: aliceblue;
+
+    #logo-button {
+        background-color: @red;
+        width: 10vh;
+        height: 10vh;
+        margin: 1vh 5vh 1vh 5vh;
+
+        // letters
+        font-size: 4vh;
+        font-weight: 800;
+        color: @pink;
+    }
+
+    ul {
+        height: 5vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        color: @red;
+        // background-color: @green;
+    
+        li {
+            list-style: none;
+            margin: 10vh;
+        }
+    }
+}
+
+main {
+    margin: 10px;
+    // 80 for initial animation, 100 for subsequent sections
+    height: 380vh;
+    display: flex;
+    justify-content: center;
+    // background-color: aliceblue;
+
+    #landing {
+        position: absolute;
+        left: 15%;
+        top: 17%;
+
+        .logo-box {
+            position: absolute;
+            width: 35vh;
+            height: 35vh;
+        }
+
+        h1 {
+            padding: 0px;
+            position: relative;
+            // font size should be about .4 of the box size
+            font-size: 14vh;
+            font-weight: 800;
+            color: @red;
+            margin: 1vh;
+        }
+
+        .landing-titles {
+            position: absolute;
+
+            h1 {
+                color: @navy;
+            }
+        }
+
+        #artist {
+            h1 {
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                top: -17.8vh;
+                left: 12.85vh;
+                // mix-blend-mode: screen;
+                // letter-spacing: -0.2em;
+                letter-spacing: -0.3em;
+            }
+
+            #artist1, #artist2 , #artist3, #artist4, #artist5, #artist6 {
+                opacity: 0;
+            }
+
+            #artist-underline {
+                top: -17.8vh;
+            }
+
+            #swe {
+                h1 {
+                    writing-mode: horizontal-tb;
+                    letter-spacing: 0em;
+                    top: -43vh;
+                    left: 16.2vh;
+                    color: @red;
+                }
+
+                #engineer {
+                    position: absolute;
+                    top: -31.3vh;
+                    left: 34.7vh;
+                }
+            }
+        }
+
+        #fall {
+            background-color: @red;
+        }
+
+        #logo-box-main {
+            background-color: @red;
+            h1 {
+                color: @pink;
+            }
+        }
+    }
+
+    canvas {
+        outline: 2px solid @red;
+    }
+}
