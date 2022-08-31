@@ -2,11 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200;300;400;500;600;700;800&display=swap');
 
 // main colors
+// background
 @pink: #F7D6E0;
+// pink at 0.8 opacity
+@pink7: rgba(247, 214, 224, 0.7);
+// light accent (colorful)
 @green: #DEEFB7;
+// light accent (neutral)
 @gray: #465362;
+// main color 1
 @red: #ED254E;
+// main color 2
 @navy: #011936;
+// link color
 @blue: #30bdc6;
 
 html, body {
@@ -20,10 +28,16 @@ html, body {
 
     a {
         text-decoration: none;
+        color: @red;
     }
 
     a:visited {
         color: inherit;
+    }
+
+    a:hover {
+        color: @blue;
+        cursor: pointer;
     }
 }
 
@@ -35,13 +49,14 @@ html, body {
 }
 
 nav {
-    // background-color: @green;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: aliceblue;
 
-    #logo-button {
+    #logo-nav {
         background-color: @red;
         width: 10vh;
         height: 10vh;
@@ -51,6 +66,11 @@ nav {
         font-size: 4vh;
         font-weight: 800;
         color: @pink;
+    }
+
+    #logo-nav:hover {
+        background-color: @blue;
+        cursor: pointer;
     }
 
     ul {
@@ -65,6 +85,8 @@ nav {
         li {
             list-style: none;
             margin: 10vh;
+            padding: 1vh;
+            background-color: @pink7;
         }
     }
 }
@@ -72,7 +94,7 @@ nav {
 main {
     margin: 10px;
     // 80 for initial animation, 100 for subsequent sections
-    height: 380vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     // background-color: aliceblue;
@@ -82,7 +104,7 @@ main {
         left: 15%;
         top: 17%;
 
-        .logo-box {
+        .logo-box-landing {
             position: absolute;
             width: 35vh;
             height: 35vh;
@@ -104,6 +126,11 @@ main {
             h1 {
                 color: @navy;
             }
+
+            h1:hover {
+                color: @blue;
+                cursor: pointer;
+            }
         }
 
         #artist {
@@ -121,10 +148,6 @@ main {
                 opacity: 0;
             }
 
-            #artist-underline {
-                top: -17.8vh;
-            }
-
             #swe {
                 h1 {
                     writing-mode: horizontal-tb;
@@ -140,10 +163,14 @@ main {
                     left: 34.7vh;
                 }
             }
-        }
 
-        #fall {
-            background-color: @red;
+            #swe:hover {
+                h1 {
+                    color: @blue;
+                }
+                
+                cursor: pointer;
+            }
         }
 
         #logo-box-main {
@@ -152,6 +179,168 @@ main {
                 color: @pink;
             }
         }
+
+        #logo-box-main:hover {
+            background-color: @blue;
+            cursor: pointer;
+        }
+
+        //change width and height of svg?
+
+        #rects-div {
+            position: absolute;
+            top: 35vh;
+        }
+
+        #rects-svg {
+            width: 35vh;
+        }
+
+        .rects {
+            height: 0vh;
+        }
+
+        .rects.show-rects {
+            height: 50vh;
+        }
+
+        #rect1 {
+            width: 11.667vh;
+            opacity: 0.8;
+            fill: @red;
+        }
+
+        #rect2 {
+            width: 11.667vh;
+            fill: @blue;
+            x: 11.667vh;
+        }
+
+        #rect3 {
+            width: 11.667vh;
+            fill: @green;
+            x: 23.333vh;
+        }
+
+        .tbc-landing {
+            position: absolute;
+            top: 85vh;
+            opacity: 0;
+        }
+
+        .tbc-landing.show-opacity {
+            opacity: 1;
+        }
+    }
+
+    #under-constr {
+        width: 127vh;
+        height: 35vh;
+        background-color: @red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0vh;
+        color: @pink;
+
+        h2 {
+            // background-color: @red;
+            font-size: 8vh;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        p {
+            // background-color: @blue;
+            font-size: 4vh;
+        }
+    }
+
+    .fullname-logo {
+        background-color: @blue;
+
+        #ela {
+            position: relative;
+            left: 31vh;
+        }
+
+        #e {
+            position: relative;
+            left: -23vh;
+        }
+    }
+
+    #info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        height: 35vh;
+        width: 70vh;
+        left: 55%;
+        top: 17%;
+        font-size: 2.5vh;
+        text-align: justify;
+        // background-color: @green;
+    }
+
+    #socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 52%;
+        left: 35%;
+        // background-color: @green;
+        height: 50vh;
+        width: 80vh;
+
+        ul {
+            line-height: 15vh;
+            font-size: 4vh;
+
+            li {
+                color: @red;
+            }
+        }
+    }
+
+    #resume {
+        width: 100vh;
+        height: 143.75vh;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            color: @red;
+            font-size: 5vh;
+        }
+    }
+
+    #art-pdf {
+        width: 100vh;
+        height: 143.75vh;
+    }
+
+    #rec-and-rate {
+        width: 130vh;
+        height: 75vh;
+    }
+
+    .but {
+        font-size: 2.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     canvas {

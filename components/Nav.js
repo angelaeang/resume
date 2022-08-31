@@ -5,9 +5,9 @@ class Nav extends HTMLElement {
   
     connectedCallback() {
         this.innerHTML = `
-            <nav>
+            <nav id="nav">
                 <a href="index.html">
-                    <div class="center-items" id="logo-button">
+                    <div class="center-items logo" id="logo-nav">
                         <span>ANG</span>
                         <span>ANG</span>
                     </div>
